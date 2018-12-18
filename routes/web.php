@@ -20,3 +20,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('products', 'ProductsController');
 
 Route::get('/product/{id}', 'FrontEndController@singleProduct')->name('product.single');
+
+Route::post('/cart/add', 'ShoppingController@add_to_cart')->name('cart.add');
