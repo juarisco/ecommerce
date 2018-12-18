@@ -22,3 +22,5 @@ Route::resource('products', 'ProductsController');
 Route::get('/product/{id}', 'FrontEndController@singleProduct')->name('product.single');
 
 Route::post('/cart/add', 'ShoppingController@add_to_cart')->name('cart.add');
+
+Route::get('/cart', 'ShoppingController@cart')->name('cart');
