@@ -13,19 +13,22 @@ class ShoppingController extends Controller
         // dd(request()->all());
         $pdt = Product::find(request()->pdt_id);
 
-        $cart = Cart::add([
+        $cartItem = Cart::add([
             'id' => $pdt->id,
             'name' => $pdt->name,
             'qty' => request()->qty,
             'price' => $pdt->price
         ]);
 
+        Cart::associate($cartItem->rowId, 'App\Product');
         // dd(Cart::content());
         return redirect()->route('cart');
     }
 
     public function cart()
     {
+        // Cart::destroy();
+
         return view('cart');
     }
 }
