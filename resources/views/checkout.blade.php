@@ -90,7 +90,7 @@
                                     </a>
                                     
                                     <span style="float: right;">
-                                        <form action="/your-server-side-code" method="POST">
+                                        {{-- <form action="/your-server-side-code" method="POST">
                                                 <script
                                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                                 data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
@@ -101,6 +101,19 @@
                                                 data-locale="auto"
                                                 data-zip-code="true">
                                                 </script>
+                                        </form> --}}
+
+                                        <form action="{{ route('cart.checkout') }}" method="POST">
+                                            @csrf
+                                            <script
+                                              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                              data-key="pk_test_Lz0WqiAQ9IoScLDJUkXZBCID"
+                                              data-amount="999"
+                                              data-name="Udemy E-commerce tutorial"
+                                              data-description="Buy some books"
+                                              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                              data-locale="auto">
+                                            </script>
                                         </form>
                                     </span>
                                 </div>
