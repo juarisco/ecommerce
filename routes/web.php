@@ -29,3 +29,5 @@ Route::get('/cart/delete/{id}', 'ShoppingController@cart_delete')->name('cart.de
 
 Route::get('/cart/incr/{id}/{qty}', 'ShoppingController@incr')->name('cart.incr');
 Route::get('/cart/decr/{id}/{qty}', 'ShoppingController@decr')->name('cart.decr');
+
+Route::get('/cart/rapid/add/{id}', 'ShoppingController@rapid_add')->name('cart.rapid.add');
