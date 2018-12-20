@@ -108,7 +108,7 @@
                                             <script
                                               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                               data-key="pk_test_Lz0WqiAQ9IoScLDJUkXZBCID"
-                                              data-amount="999"
+                                              data-amount="{{ Cart::total() * 100 }}"
                                               data-name="Udemy E-commerce tutorial"
                                               data-description="Buy some books"
                                               data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
