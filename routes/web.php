@@ -26,3 +26,6 @@ Route::post('/cart/add', 'ShoppingController@add_to_cart')->name('cart.add');
 Route::get('/cart', 'ShoppingController@cart')->name('cart');
 
 Route::get('/cart/delete/{id}', 'ShoppingController@cart_delete')->name('cart.delete');
+
+Route::get('/cart/incr/{id}/{qty}', 'ShoppingController@incr')->name('cart.incr');
+Route::get('/cart/decr/{id}/{qty}', 'ShoppingController@decr')->name('cart.decr');
